@@ -36,6 +36,6 @@ function solve() {
 
   solve();
 
-  document.getElementById("resultSolve").innerHTML = `result-solve`;
+  
 
 //   Second excercise

@@ -14,28 +14,42 @@ Exercise List:
 A challenge that involves applying conditions and logic to determine a winner in a rock-paper-scissors style game.
 
 Solution: 
-function solve(a, b) {
-  let aliceScore = 0;
-  let bobScore = 0;
+function solve() {
+  let arrayAlice = [20, 32, 18];
+  let arrayBob = [48, 25, 40];
+    let aliceScore = 0;
+    let bobScore = 0;
 
-  // Confronta i punteggi per ogni categoria
-  for (let i = 0; i < 3; i++) {
-    if (a[i] > b[i]) {
+    if (arrayAlice[0] > arrayBob[0]) {
       aliceScore++;
-    } else if (a[i] < b[i]) {
+    } else if (arrayAlice[0] < arrayBob[0]) {
       bobScore++;
+    };
+
+    if (arrayAlice[1] > arrayBob[1]) {
+      aliceScore++;
+    } else if (arrayAlice[1] < arrayBob[1]) {
+      bobScore++;
+    };
+
+    if (arrayAlice[2] > arrayBob[2]) {
+      aliceScore++;
+    } else if (arrayAlice[2] < arrayBob[2]) {
+      bobScore++;
+    };
+  
+    // Stampa il risultato finale
+    if (aliceScore > bobScore) {
+      console.log(`${aliceScore}, ${bobScore}: Alice made "Kurt" proud!`);
+    } else if (bobScore > aliceScore) {
+      console.log(`${aliceScore}, ${bobScore}: Bob made "Jeff" proud!`);
+    } else {
+      console.log(`${aliceScore}, ${bobScore}: That looks like a "draw"! Rock on!`);
     }
+    return [aliceScore, bobScore];
   }
 
-  // Stampa il risultato finale
-  if (aliceScore > bobScore) {
-    console.log(`${aliceScore}, ${bobScore}: Alice made "Kurt" proud!`);
-  } else if (bobScore > aliceScore) {
-    console.log(`${aliceScore}, ${bobScore}: Bob made "Jeff" proud!`);
-  } else {
-    console.log(`${aliceScore}, ${bobScore}: That looks like a "draw"! Rock on!`);
-  }
-}
+  solve();
 
 2️⃣ Shortest Word
 A function to find the shortest word in a string, utilizing loops and string manipulation.
