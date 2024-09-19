@@ -1,18 +1,27 @@
 // First excercise
-function solve(a, b) {
+function solve() {
   let arrayAlice = [20, 32, 18];
   let arrayBob = [48, 25, 40];
     let aliceScore = 0;
     let bobScore = 0;
-  
-    // Confronta i punteggi per ogni categoria
-    for (let i = 0; i < 3; i++) {
-      if (a[i] > b[i]) {
-        aliceScore++;
-      } else if (a[i] < b[i]) {
-        bobScore++;
-      }
-    }
+
+    if (arrayAlice[0] > arrayBob[0]) {
+      aliceScore++;
+    } else if (arrayAlice[0] < arrayBob[0]) {
+      bobScore++;
+    };
+
+    if (arrayAlice[1] > arrayBob[1]) {
+      aliceScore++;
+    } else if (arrayAlice[1] < arrayBob[1]) {
+      bobScore++;
+    };
+
+    if (arrayAlice[2] > arrayBob[2]) {
+      aliceScore++;
+    } else if (arrayAlice[2] < arrayBob[2]) {
+      bobScore++;
+    };
   
     // Stampa il risultato finale
     if (aliceScore > bobScore) {
@@ -25,7 +34,7 @@ function solve(a, b) {
     return [aliceScore, bobScore];
   }
 
-  solve(10, 2);
+  solve();
 
   document.getElementById("resultSolve").innerHTML = `result-solve`;
 
