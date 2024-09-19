@@ -66,8 +66,14 @@ document.getElementById("media").innerHTML = media(1, 2, 3, 4);
 
 //   Second excercise
 
-const string = "ciao come stai, mi chiamo marco e ho 30 anni, vengo da Milano e la sera ballo il ciàciàcià";
+const string = "braccio gamba orecchio dito falange unghia piede polpaccio naso deltoide occhio";
 
-const newString = string.replace(/,/g, " ");
 
-console.log(newString)
+function findShortestWordLength(str) {
+  return str
+    .split(' ')             // Split the string into an array of words
+    .map(word => word.length) // Map each word to its length
+    .reduce((a, b) => Math.min(a, b)); // Find the minimum length
+}
+
+console.log(findShortestWordLength(string)); // Output: 4
