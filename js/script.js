@@ -45,18 +45,24 @@ function checkEvenOdd(num) {
   }
 };
 
+document.getElementById("resultSolve").innerHTML = console.log(checkEvenOdd(0));
+document.getElementById("resultSolve").innerHTML = checkEvenOdd(0);
+
 // Calcolare la media
 
 function media(num1, num2, num3, num4) {
   
   const sum = num1 + num2 + num3 + num4;
   
-  const mediaSum = sum / 4;
+  const media = sum / 4;
   
-  return mediaSum;
+  document.getElementById("media").innerHTML = media;
+  
+  return media;
 }
 
-document.getElementById("media").innerHTML = media(5, 4, 2, 10);
+media(2, 4, 6, 15);
+document.getElementById("media").innerHTML = media(1, 2, 3, 4);
 
 //   Second excercise
 
