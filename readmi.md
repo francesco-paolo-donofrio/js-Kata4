@@ -54,6 +54,10 @@ function solve() {
 2️⃣ Shortest Word
 A function to find the shortest word in a string, utilizing loops and string manipulation.
 
+"Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types."
+
 3️⃣ Stop gninnipS My sdroW!
 A fun exercise that reverses words in a sentence over a specific length, using array methods and string manipulation.
 

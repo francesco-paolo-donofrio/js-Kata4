@@ -37,9 +37,6 @@ function solve() {
 solve();
 
 
-
-//   Second excercise
-
 function checkEvenOdd(num) {
   if (num % 2 === 0) {
     return "pari";
@@ -48,5 +45,23 @@ function checkEvenOdd(num) {
   }
 };
 
-document.getElementById("resultSolve").innerHTML = console.log(checkEvenOdd(0));
-document.getElementById("resultSolve").innerHTML = checkEvenOdd(0);
+// Calcolare la media
+
+function media(num1, num2, num3, num4) {
+  
+  const sum = num1 + num2 + num3 + num4;
+  
+  const mediaSum = sum / 4;
+  
+  return mediaSum;
+}
+
+document.getElementById("media").innerHTML = media(5, 4, 2, 10);
+
+//   Second excercise
+
+const string = "ciao come stai, mi chiamo marco e ho 30 anni, vengo da Milano e la sera ballo il ciàciàcià";
+
+const newString = string.replace(/,/g, " ");
+
+console.log(newString)
