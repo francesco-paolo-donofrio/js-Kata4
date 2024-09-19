@@ -49,5 +49,4 @@ function checkEvenOdd(num) {
 };
 
 document.getElementById("resultSolve").innerHTML = console.log(checkEvenOdd(0));
-
-
+document.getElementById("resultSolve").innerHTML = checkEvenOdd(0);
