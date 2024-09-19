@@ -1,5 +1,7 @@
 // First excercise
 function solve(a, b) {
+  let arrayAlice = [20, 32, 18];
+  let arrayBob = [48, 25, 40];
     let aliceScore = 0;
     let bobScore = 0;
   
@@ -20,6 +22,11 @@ function solve(a, b) {
     } else {
       console.log(`${aliceScore}, ${bobScore}: That looks like a "draw"! Rock on!`);
     }
+    return [aliceScore, bobScore];
   }
+
+  solve(10, 2);
+
+  document.getElementById("resultSolve").innerHTML = `result-solve`;
 
 //   Second excercise
