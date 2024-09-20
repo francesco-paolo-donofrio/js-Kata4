@@ -74,8 +74,21 @@ A fun exercise that reverses words in a sentence over a specific length, using a
 
 Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
+const reversString1 = "Buongiorno cari amici";
+const reversString2 = "Ciao come state";
+function reverseString(sentence) {
+  return sentence.split(" ").map(word => {
+    return word.length >= 5 ? word.split("").reverse().join("") : word;
+  }).join(" ");
+}
+
+console.log(reverseString(reversString1));
+console.log(reverseString(reversString2));
+
 4️⃣ You only need one
 This task checks if an array contains a certain value, perfect for practicing array search methods.
+
+
 
 5️⃣ Detect Pangram
 A challenge to verify if a sentence is a pangram, requiring knowledge of string manipulation and logical conditions.
