@@ -79,11 +79,13 @@ console.log(`The shortest word in the string has length ${findShortestWordLength
 
 // Third excercise
 
-const reversString = "Buongiorno cari amici";
+const reversString1 = "Buongiorno cari amici";
+const reversString2 = "Ciao come state";
 function reverseString(sentence) {
   return sentence.split(" ").map(word => {
     return word.length >= 5 ? word.split("").reverse().join("") : word;
   }).join(" ");
 }
 
-console.log(reverseString(reversString));
+console.log(reverseString(reversString1));
+console.log(reverseString(reversString2));
