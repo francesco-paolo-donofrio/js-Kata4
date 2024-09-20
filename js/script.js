@@ -66,14 +66,13 @@ document.getElementById("media").innerHTML = media(1, 2, 3, 4);
 
 //   Second excercise
 
-const string = "braccio gamba orecchio dito falange unghia piede polpaccio naso deltoide occhio";
+const string = "braccio,gamba,orecchio,dito,falange,unghia,piede,polpaccio,neo,naso,deltoide,occhio";
 
-
-function findShortestWordLength(str) {
-  return str
-    .split(' ')             // Split the string into an array of words
+function findShortestWordLength(string) {
+  return string
+    .split(',')             // Split the string into an array of words
     .map(word => word.length) // Map each word to its length
     .reduce((a, b) => Math.min(a, b)); // Find the minimum length
 }
 
-console.log(findShortestWordLength(string)); // Output: 4
+console.log(`The shortest word in the string has length ${findShortestWordLength(string)}.`);
