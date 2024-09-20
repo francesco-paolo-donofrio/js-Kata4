@@ -89,3 +89,15 @@ function reverseString(sentence) {
 
 console.log(reverseString(reversString1));
 console.log(reverseString(reversString2));
+
+// Fourth excercise
+
+myArray = [
+  Giovanni = 32,
+  Lorenzo = 18,
+  Margherita = 48,
+  Matteo = 25,
+  Antonio = 40
+]
+
+const xValue = Margherita;
