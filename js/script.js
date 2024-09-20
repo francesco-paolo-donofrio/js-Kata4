@@ -76,3 +76,5 @@ function findShortestWordLength(string) {
 }
 
 console.log(`The shortest word in the string has length ${findShortestWordLength(string)}.`);
+
+// Third excercise

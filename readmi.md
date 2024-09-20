@@ -58,8 +58,21 @@ A function to find the shortest word in a string, utilizing loops and string man
 
 String will never be empty and you do not need to account for different data types."
 
+const string = "braccio,gamba,orecchio,dito,falange,unghia,piede,polpaccio,neo,naso,deltoide,occhio";
+
+function findShortestWordLength(string) {
+  return string
+    .split(',')             // Split the string into an array of words
+    .map(word => word.length) // Map each word to its length
+    .reduce((a, b) => Math.min(a, b)); // Find the minimum length
+}
+
+console.log(`The shortest word in the string has length ${findShortestWordLength(string)}.`);
+
 3️⃣ Stop gninnipS My sdroW!
 A fun exercise that reverses words in a sentence over a specific length, using array methods and string manipulation.
+
+Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
 4️⃣ You only need one
 This task checks if an array contains a certain value, perfect for practicing array search methods.
