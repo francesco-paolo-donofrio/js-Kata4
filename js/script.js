@@ -100,20 +100,38 @@ ArrayA = [
   "prosciuttoCrudo"
 ];
 
+ArrayB = [
+  "margherita",
+  "funghi",
+  "carciofi",
+  "prosciuttoCotto",
+  "prosciuttoCrudo"
+];
+
 const ValueX = "margherita";
 const ValueY = "prosciutto";
-const ValueZ = "funghi";
+const ValueZ = "carciofi";
 
+// Con ciclo for
 function findValue(array, value) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 }
 
 console.log(findValue(ArrayA, ValueX));
 console.log(findValue(ArrayA, ValueY));
 console.log(findValue(ArrayA, ValueZ));
+
+// Con metodo Includes
+
+console.log(ArrayA.includes(ValueX));
+console.log(ArrayA.includes(ValueY));
+console.log(ArrayA.includes(ValueY));
+
+// Restituisce in automatico true o false
+
+// Altri metodi possibili : Some(restituisce true se almeno un elemento soddisfa la condizione) - IndexOf (restituisce l'indice se è presente nell'array)
