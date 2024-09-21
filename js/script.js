@@ -92,12 +92,24 @@ console.log(reverseString(reversString2));
 
 // Fourth excercise
 
-myArray = [
-  Giovanni = 32,
-  Lorenzo = 18,
-  Margherita = 48,
-  Matteo = 25,
-  Antonio = 40
-]
+ArrayA = [
+  "margherita",
+  "funghi",
+  "carciofi",
+  "prosciuttoCotto",
+  "prosciuttoCrudo"
+];
 
-const xValue = Margherita;
+const ValueX = "margherita";
+
+function findValue(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === ValueX) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+console.log(findValue(ArrayA));
