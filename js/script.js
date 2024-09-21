@@ -101,10 +101,12 @@ ArrayA = [
 ];
 
 const ValueX = "margherita";
+const ValueY = "prosciutto";
+const ValueZ = "funghi";
 
-function findValue(array) {
+function findValue(array, value) {
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === ValueX) {
+    if (array[i] === value) {
       return true;
     } else {
       return false;
@@ -112,4 +114,6 @@ function findValue(array) {
   }
 }
 
-console.log(findValue(ArrayA));
+console.log(findValue(ArrayA, ValueX));
+console.log(findValue(ArrayA, ValueY));
+console.log(findValue(ArrayA, ValueZ));
