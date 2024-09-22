@@ -166,3 +166,18 @@ const AlphabetLetter = [
   "y",
   "z"
 ];
+
+const StringToCheck = "Buongiorno, mi chiamo Francesco e sono lo zio di cassandra";
+
+function checkString(array, string){
+  string = string.toLowerCase();
+  array.forEach(letter => {
+    if (string.includes(letter)) {
+      console.log(letter);
+      return true;
+    }
+    return false;
+  });
+}
+
+checkString(AlphabetLetter, StringToCheck);

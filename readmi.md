@@ -99,6 +99,10 @@ Return true if the array contains the value, false if not.
 5️⃣ Detect Pangram
 A challenge to verify if a sentence is a pangram, requiring knowledge of string manipulation and logical conditions.
 
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
 Learning Goals:
 Strengthen understanding of JavaScript fundamentals.
 Apply conditions, loops, and array methods effectively.
