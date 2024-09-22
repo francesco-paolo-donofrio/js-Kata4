@@ -135,3 +135,34 @@ console.log(ArrayA.includes(ValueY));
 // Restituisce in automatico true o false
 
 // Altri metodi possibili : Some(restituisce true se almeno un elemento soddisfa la condizione) - IndexOf (restituisce l'indice se è presente nell'array)
+
+// Fifth excercise
+
+const AlphabetLetter = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+];
