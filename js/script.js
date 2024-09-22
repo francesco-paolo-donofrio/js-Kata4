@@ -145,8 +145,9 @@ const AlphabetLetter = [
 ];
 
 const StringToCheck = "Buongiorno, mi chiamo Francesco e sono lo zio di cassandra";
-
+const StringToCheck2 = "The quick brown fox jumps over the lazy dog";
 function checkString(array, string) {
+  // Creiamo un oggetto Set per salvare le lettere uniche trovate nella stringa
   const lettersFound = new Set();
   string = string.toLowerCase();
 
@@ -155,9 +156,11 @@ function checkString(array, string) {
       lettersFound.add(letter);
     }
   }
-
+  // Se la grandezza dell'array di lettere trovate è uguale alla lunghezza dell'array passato alla funzione allora restituisce true, altrimenti false
   return lettersFound.size === array.length;
 }
 
 const isPangram = checkString(AlphabetLetter, StringToCheck);
 console.log(isPangram);
+const isPangram2 = checkString(AlphabetLetter, StringToCheck2);
+console.log(isPangram2);
