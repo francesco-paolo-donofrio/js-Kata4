@@ -9,6 +9,8 @@ Arrays
 Array Methods
 Objects
 
+---------------------------------------------------------------------------------------------
+
 Exercise List:
 1️⃣ Rock off!
 A challenge that involves applying conditions and logic to determine a winner in a rock-paper-scissors style game.
@@ -58,6 +60,7 @@ A function to find the shortest word in a string, utilizing loops and string man
 
 String will never be empty and you do not need to account for different data types."
 
+Solution:
 const string = "braccio,gamba,orecchio,dito,falange,unghia,piede,polpaccio,neo,naso,deltoide,occhio";
 
 function findShortestWordLength(string) {
@@ -74,6 +77,7 @@ A fun exercise that reverses words in a sentence over a specific length, using a
 
 Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
+Solution:
 const reversString1 = "Buongiorno cari amici";
 const reversString2 = "Ciao come state";
 function reverseString(sentence) {
@@ -94,6 +98,47 @@ Array can contain numbers or strings. X can be either.
 
 Return true if the array contains the value, false if not.
 
+Solution:
+ArrayA = [
+  "margherita",
+  "funghi",
+  "carciofi",
+  "prosciuttoCotto",
+  "prosciuttoCrudo"
+];
+
+ArrayB = [
+  "margherita",
+  "funghi",
+  "carciofi",
+  "prosciuttoCotto",
+  "prosciuttoCrudo"
+];
+
+const ValueX = "margherita";
+const ValueY = "prosciutto";
+const ValueZ = "carciofi";
+
+// Con ciclo for
+function findValue(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(findValue(ArrayA, ValueX));
+console.log(findValue(ArrayA, ValueY));
+console.log(findValue(ArrayA, ValueZ));
+
+// Con metodo Includes
+
+console.log(ArrayA.includes(ValueX));
+console.log(ArrayA.includes(ValueY));
+console.log(ArrayA.includes(ValueY));
+
 
 
 5️⃣ Detect Pangram
@@ -102,6 +147,36 @@ A challenge to verify if a sentence is a pangram, requiring knowledge of string 
 A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+Solution:
+const AlphabetLetter = [
+  "a", "b", "c", "d", "e", "f", "g", "h", "i",
+  "j", "k", "l", "m", "n", "o", "p", "q", "r",
+  "s", "t", "u", "v", "w", "x", "y", "z"
+];
+
+const StringToCheck = "Buongiorno, mi chiamo Francesco e sono lo zio di cassandra";
+const StringToCheck2 = "The quick brown fox jumps over the lazy dog";
+function checkString(array, string) {
+  // Creiamo un oggetto Set per salvare le lettere uniche trovate nella stringa
+  const lettersFound = new Set();
+  string = string.toLowerCase();
+
+  for (const letter of string) {
+    if (array.includes(letter)) {
+      lettersFound.add(letter);
+    }
+  }
+  // Se la grandezza dell'array di lettere trovate è uguale alla lunghezza dell'array passato alla funzione allora restituisce true, altrimenti false
+  return lettersFound.size === array.length;
+}
+
+const isPangram = checkString(AlphabetLetter, StringToCheck);
+console.log(isPangram);
+const isPangram2 = checkString(AlphabetLetter, StringToCheck2);
+console.log(isPangram2);
+
+--------------------------------------------------------------------------------------------------------------------
 
 Learning Goals:
 Strengthen understanding of JavaScript fundamentals.
