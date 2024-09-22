@@ -139,45 +139,25 @@ console.log(ArrayA.includes(ValueY));
 // Fifth excercise
 
 const AlphabetLetter = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z"
+  "a", "b", "c", "d", "e", "f", "g", "h", "i",
+  "j", "k", "l", "m", "n", "o", "p", "q", "r",
+  "s", "t", "u", "v", "w", "x", "y", "z"
 ];
 
 const StringToCheck = "Buongiorno, mi chiamo Francesco e sono lo zio di cassandra";
 
-function checkString(array, string){
+function checkString(array, string) {
+  const lettersFound = new Set();
   string = string.toLowerCase();
-  array.forEach(letter => {
-    if (string.includes(letter)) {
-      console.log(letter);
-      return true;
+
+  for (const letter of string) {
+    if (array.includes(letter)) {
+      lettersFound.add(letter);
     }
-    return false;
-  });
+  }
+
+  return lettersFound.size === array.length;
 }
 
-checkString(AlphabetLetter, StringToCheck);
+const isPangram = checkString(AlphabetLetter, StringToCheck);
+console.log(isPangram);
